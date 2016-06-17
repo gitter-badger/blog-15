@@ -1,23 +1,146 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title> on Random Thoughts </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>Random Thoughts</title>
     <link>https://hadrouj.github.io/blog/</link>
+    <description>Recent content on Random Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    
-    
-    <updated>Thu, 16 Jun 2016 22:16:27 UTC</updated>
+    <lastBuildDate>Thu, 16 Jun 2016 22:16:27 +0000</lastBuildDate>
+    <atom:link href="https://hadrouj.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Start a blog with Github and Hugo</title>
       <link>https://hadrouj.github.io/blog/post/start-a-blog-with-github-and-hugo/</link>
-      <pubDate>Thu, 16 Jun 2016 22:16:27 UTC</pubDate>
+      <pubDate>Thu, 16 Jun 2016 22:16:27 +0000</pubDate>
       
       <guid>https://hadrouj.github.io/blog/post/start-a-blog-with-github-and-hugo/</guid>
-      <description>Well well Well&amp;hellip; this is my first post using Hugo and a really quick intro to setup it up, and publish a blog (for free) on Github. Hugo Hugo is a lightning fast and simple static web pages generator, suitable for blogs, documentation pages, portfolios, etc. It has been developed with Golang, and runs on MacOs X, Windows and Linux. Pages built with Hugo can be deployed on S3, GitHub Pages, Dropbox or any web host.</description>
+      <description>
+
+&lt;p&gt;Well well Well&amp;hellip; this is my first post using Hugo and a really quick intro to setup it up, and publish a blog (for free) on Github.&lt;/p&gt;
+
+&lt;h3 id=&#34;hugo&#34;&gt;Hugo&lt;/h3&gt;
+
+&lt;p&gt;Hugo is a lightning fast and simple static web pages generator, suitable for blogs, documentation pages, portfolios, etc.
+It has been developed with Golang, and runs on MacOs X, Windows and Linux. Pages built with Hugo can be deployed on S3, GitHub Pages, Dropbox or any web host.
+It&amp;rsquo;s made for people who don&amp;rsquo;t mind using a CLI to write blog posts, or to manage their website.&lt;/p&gt;
+
+&lt;p&gt;The full Hugo documentation is at this page: &lt;a href=&#34;https://gohugo.io/overview/introduction/&#34;&gt;https://gohugo.io/overview/introduction/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;installation&#34;&gt;Installation&lt;/h4&gt;
+
+&lt;p&gt;This tutorial doesn&amp;rsquo;t aim to replace the official &lt;a href=&#34;https://gohugo.io/overview/installing/&#34;&gt;install tutorial&lt;/a&gt;, here is the short and simplest method on MacOs X :&lt;/p&gt;
+
+&lt;p&gt;Install brew on your system if it&amp;rsquo;s not already there:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Update Homebrew and install Hugo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ brew update &amp;amp;&amp;amp; brew install hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and&amp;hellip; that&amp;rsquo;s it! You&amp;rsquo;re all set to run Hugo. To check Hugo&amp;rsquo;s version, just type:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ hugo version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;setting-up-your-blog&#34;&gt;Setting Up Your Blog&lt;/h4&gt;
+
+&lt;p&gt;Now, let&amp;rsquo;s get the most interesting part, which is creating your site and adding content to it.
+To create a typical site structure (scaffolding), use the subcommand &amp;lsquo;new site&amp;rsquo;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ hugo new site myblog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We need to add a new theme (Hugo is not shipped with a default theme). So, you could start by picking one on &lt;a href=&#34;https://themes.gohugo.io&#34;&gt;https://themes.gohugo.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Change your current directory to themes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ cd myblog/themes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then create a directory that contains your choosen theme :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ git clone https://github.com/parsiya/hugo-octopress/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Edit your new blog configuration by changing config.toml file, present in the root of your generated site. Don&amp;rsquo;t forget to add the following line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;  baseurl = &amp;quot;https://&amp;lt;your username&amp;gt;.github.io/blog&amp;quot;
+  languageCode = &amp;quot;en-us&amp;quot;
+  title = &amp;quot;Random Thoughts&amp;quot;
+  theme = &amp;quot;hugo-octopress&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Eventually customize your theme by editing theme.toml in myblog/themes/hugo-octopress directory.&lt;/p&gt;
+
+&lt;h4 id=&#34;adding-new-posts&#34;&gt;Adding new posts&lt;/h4&gt;
+
+&lt;p&gt;Change your current directory to your site root then run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ hugo new post/new-article-title.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Edit the file in myblog/content/post/new-article-title.md and add the content of your article in the body section (after the second +++). Here is a &lt;a href=&#34;https://help.github.com/articles/basic-writing-and-formatting-syntax/&#34;&gt;page&lt;/a&gt; to help you use the Markdown syntax in order to put your post in a desirable shape.
+Save the file then exit your editor.&lt;/p&gt;
+
+&lt;p&gt;The article you&amp;rsquo;ve just wrote will not be viewable publicly until you Undraft it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ hugo undraft content/post/new-article-title.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;run-the-server&#34;&gt;Run the server&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ hugo server -w
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Fire up your favourite browser and point to &lt;a href=&#34;http://localhost:1313&#34;&gt;http://localhost:1313&lt;/a&gt;, you should see your blog homepage shining with one glorious article :)&lt;/p&gt;
+
+&lt;p&gt;Notice the -w flag that asks hugo to watch filesystem for change and reload the site if necessary.&lt;/p&gt;
+
+&lt;p&gt;if you&amp;rsquo;d like to serve all posts including the ones in draft state, set the flag buildDrafts to hugo server command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ hugo server --buildDrafts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;deploy-to-github&#34;&gt;Deploy to GitHub&lt;/h3&gt;
+
+&lt;p&gt;First off we need to generate the site content that will be published on GitHub.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ hugo
+  Started building site
+  0 draft content
+  0 future content
+  1 pages created
+  0 non-page files copied
+  0 paginator pages created
+  0 tags created
+  0 categories created
+  in 120 ms
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Create a new directory and copy the public content from myblog/public to it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ mkdir ~/myblog-public
+  $ cp -r myblog/public/ myblog-public
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then initiate a Git repo, switch to gh-pages branch and set a remote:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;  $ cd ~/myblog-public
+  $ git init
+  $ git checkout -b gh-pages
+  $ git add --all
+  $ git commit -m &#39;first article&#39;
+  $ git remote add origin https://github.com/&amp;lt;your username&amp;gt;/blog.git
+  $ git push origin gh-pages
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Your new blog should appear within few minutes in https://&amp;lt;your username&amp;gt;.github.io/blog&lt;/p&gt;
+</description>
     </item>
     
   </channel>
 </rss>
-

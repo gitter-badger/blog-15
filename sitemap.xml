@@ -1,1 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://hadrouj.github.io/blog/</loc>
+    <lastmod>2016-06-16T22:16:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hadrouj.github.io/blog/post/start-a-blog-with-github-and-hugo/</loc>
+    <lastmod>2016-06-16T22:16:27+00:00</lastmod>
+  </url>
+  
+</urlset>

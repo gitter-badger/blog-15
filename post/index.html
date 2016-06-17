@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Random Thoughts</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<!--[if lt IE 9]>
+	<script src="https://hadrouj.github.io/blog/js/html5.js"></script>
+	<![endif]-->
+    
+    <link href="https://hadrouj.github.io/blog/index.xml" rel="alternate" type="application/rss+xml" title="Random Thoughts" />
+
+    <link rel='stylesheet' id='twentyfourteen-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+
+    <link rel='stylesheet' id='genericons-css' href='https://hadrouj.github.io/blog/genericons/genericons.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='twentyfourteen-style-css' href='https://hadrouj.github.io/blog/css/style.css' type='text/css' media='all' />
+	
+	<script type='text/javascript' src='https://hadrouj.github.io/blog/js/jquery/jquery.js'></script>
+	<script type='text/javascript' src='https://hadrouj.github.io/blog/js/jquery/jquery-migrate.min.js'></script>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="home blog masthead-fixed list-view full-width grid">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			<h1 class="site-title"><a href="https://hadrouj.github.io/blog/index.html" rel="home">Random Thoughts</a></h1>
+
+			<div class="search-toggle">
+				<a href="#search-container" class="screen-reader-text">Search</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<button class="menu-toggle">Primary Menu</button>
+				<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+				<div class="nav-menu">
+					<ul>
+						
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+                <script type="text/javascript">
+    function site_search(obj) {
+    	var host = window.location.host;
+        obj.q.value = "site:" + host + " " + obj.ss_q.value;
+    }
+</script>
+
+<aside id="search-3" class="widget widget_search">
+	<form role="search" class="search-form" action="//www.google.com/search" method="get" onSubmit="site_search(this)">
+
+	<input name="q" type="hidden" />
+	    <label>
+	        <span class="screen-reader-text">Search for:</span>
+	        <input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
+	    </label>
+	    <input type="submit" value="Search" class="search-submit" />
+	</form>
+</aside>
+			</div>
+		</div>
+	</header>
+
+	<div id="main" class="site-main">
+
+
+<div id="main-content" class="main-content">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+			<header class="archive-header">
+				<h1 class="archive-title">Posts Archive</h1>
+			</header>
+
+			
+				<article class="post type-post status-publish format-standard hentry">
+
+	
+	<header class="entry-header">
+
+	
+
+		<div class="entry-meta">
+			<span class="cat-links">
+                
+			</span>
+		</div>
+
+		<h1 class="entry-title">Start a blog with Github and Hugo</h1>
+
+		<div class="entry-meta">
+			<span class="entry-date">
+				<a href="https://hadrouj.github.io/blog/post/start-a-blog-with-github-and-hugo//index.html" rel="bookmark">
+					<time class="entry-date" datetime="2016-06-16 22:16:27 &#43;0000 UTC">
+						June 16
+					</time>
+				</a>
+			</span>
+		</div>
+
+	</header>
+	
+	<div class="entry-content">
+		
+
+<p>Well well Well&hellip; this is my first post using Hugo and a really quick intro to setup it up, and publish a blog (for free) on Github.</p>
+
+<h3 id="hugo">Hugo</h3>
+
+<p>Hugo is a lightning fast and simple static web pages generator, suitable for blogs, documentation pages, portfolios, etc.
+It has been developed with Golang, and runs on MacOs X, Windows and Linux. Pages built with Hugo can be deployed on S3, GitHub Pages, Dropbox or any web host.
+It&rsquo;s made for people who don&rsquo;t mind using a CLI to write blog posts, or to manage their website.</p>
+
+<p>The full Hugo documentation is at this page: <a href="https://gohugo.io/overview/introduction/">https://gohugo.io/overview/introduction/</a></p>
+
+<h4 id="installation">Installation</h4>
+
+<p>This tutorial doesn&rsquo;t aim to replace the official <a href="https://gohugo.io/overview/installing/">install tutorial</a>, here is the short and simplest method on MacOs X :</p>
+
+<p>Install brew on your system if it&rsquo;s not already there:</p>
+
+<pre><code class="language-bash">  $ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+
+<p>Update Homebrew and install Hugo:</p>
+
+<pre><code class="language-bash">  $ brew update &amp;&amp; brew install hugo
+</code></pre>
+
+<p>and&hellip; that&rsquo;s it! You&rsquo;re all set to run Hugo. To check Hugo&rsquo;s version, just type:</p>
+
+<pre><code class="language-bash">  $ hugo version
+</code></pre>
+
+<h4 id="setting-up-your-blog">Setting Up Your Blog</h4>
+
+<p>Now, let&rsquo;s get the most interesting part, which is creating your site and adding content to it.
+To create a typical site structure (scaffolding), use the subcommand &lsquo;new site&rsquo;:</p>
+
+<pre><code class="language-bash">  $ hugo new site myblog
+</code></pre>
+
+<p>We need to add a new theme (Hugo is not shipped with a default theme). So, you could start by picking one on <a href="https://themes.gohugo.io">https://themes.gohugo.io</a></p>
+
+<p>Change your current directory to themes:</p>
+
+<pre><code class="language-bash">  $ cd myblog/themes
+</code></pre>
+
+<p>Then create a directory that contains your choosen theme :</p>
+
+<pre><code class="language-bash">  $ git clone https://github.com/parsiya/hugo-octopress/
+</code></pre>
+
+<p>Edit your new blog configuration by changing config.toml file, present in the root of your generated site. Don&rsquo;t forget to add the following line:</p>
+
+<pre><code class="language-toml">  baseurl = &quot;https://&lt;your username&gt;.github.io/blog&quot;
+  languageCode = &quot;en-us&quot;
+  title = &quot;Random Thoughts&quot;
+  theme = &quot;hugo-octopress&quot;
+</code></pre>
+
+<p>Eventually customize your theme by editing theme.toml in myblog/themes/hugo-octopress directory.</p>
+
+<h4 id="adding-new-posts">Adding new posts</h4>
+
+<p>Change your current directory to your site root then run:</p>
+
+<pre><code class="language-bash">  $ hugo new post/new-article-title.md
+</code></pre>
+
+<p>Edit the file in myblog/content/post/new-article-title.md and add the content of your article in the body section (after the second +++). Here is a <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">page</a> to help you use the Markdown syntax in order to put your post in a desirable shape.
+Save the file then exit your editor.</p>
+
+<p>The article you&rsquo;ve just wrote will not be viewable publicly until you Undraft it:</p>
+
+<pre><code class="language-bash">  $ hugo undraft content/post/new-article-title.md
+</code></pre>
+
+<h4 id="run-the-server">Run the server</h4>
+
+<pre><code class="language-bash">  $ hugo server -w
+</code></pre>
+
+<p>Fire up your favourite browser and point to <a href="http://localhost:1313">http://localhost:1313</a>, you should see your blog homepage shining with one glorious article :)</p>
+
+<p>Notice the -w flag that asks hugo to watch filesystem for change and reload the site if necessary.</p>
+
+<p>if you&rsquo;d like to serve all posts including the ones in draft state, set the flag buildDrafts to hugo server command:</p>
+
+<pre><code class="language-bash">  $ hugo server --buildDrafts
+</code></pre>
+
+<h3 id="deploy-to-github">Deploy to GitHub</h3>
+
+<p>First off we need to generate the site content that will be published on GitHub.</p>
+
+<pre><code class="language-bash">  $ hugo
+  Started building site
+  0 draft content
+  0 future content
+  1 pages created
+  0 non-page files copied
+  0 paginator pages created
+  0 tags created
+  0 categories created
+  in 120 ms
+</code></pre>
+
+<p>Create a new directory and copy the public content from myblog/public to it:</p>
+
+<pre><code class="language-bash">  $ mkdir ~/myblog-public
+  $ cp -r myblog/public/ myblog-public
+</code></pre>
+
+<p>Then initiate a Git repo, switch to gh-pages branch and set a remote:</p>
+
+<pre><code class="language-bash">  $ cd ~/myblog-public
+  $ git init
+  $ git checkout -b gh-pages
+  $ git add --all
+  $ git commit -m 'first article'
+  $ git remote add origin https://github.com/&lt;your username&gt;/blog.git
+  $ git push origin gh-pages
+</code></pre>
+
+<p>Your new blog should appear within few minutes in https://&lt;your username&gt;.github.io/blog</p>
+
+	</div>
+
+	<footer class="entry-meta">
+		<span class="tag-links">		
+			
+		</span>
+	</footer>
+</article> 
+			
+		
+		</div>
+	</div>
+	<div id="secondary">
+
+	
+
+	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+
+		<script type="text/javascript">
+    function site_search(obj) {
+    	var host = window.location.host;
+        obj.q.value = "site:" + host + " " + obj.ss_q.value;
+    }
+</script>
+
+<aside id="search-3" class="widget widget_search">
+	<form role="search" class="search-form" action="//www.google.com/search" method="get" onSubmit="site_search(this)">
+
+	<input name="q" type="hidden" />
+	    <label>
+	        <span class="screen-reader-text">Search for:</span>
+	        <input name="ss_q" type="text" placeholder="Search ..." class="search-field" />
+	    </label>
+	    <input type="submit" value="Search" class="search-submit" />
+	</form>
+</aside>
+
+		<aside id="recent-posts-3" class="widget widget_recent_entries">
+
+	
+	<h1 class="widget-title">Recent Posts</h1>
+		<ul>
+			
+			<li>
+				<a href="https://hadrouj.github.io/blog/post/start-a-blog-with-github-and-hugo//index.html">Start a blog with Github and Hugo</a>
+			</li>
+			
+		</ul>
+	
+</aside>
+
+		<aside id="categories-3" class="widget widget_categories">
+	
+	<h1 class="widget-title">Categories</h1>
+
+	<ul>
+		
+		
+
+	</ul>
+
+</aside>
+
+	</div>
+
+</div>
+
+</div>
+
+		</div>
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<div class="site-info">
+				<a href="http://gohugo.io">Proudly powered by Hugo</a>
+			</div>
+		</footer>
+	</div>
+
+	<script type='text/javascript' src='https://hadrouj.github.io/blog/js/functions.js'></script>
+</body>
+</html>
