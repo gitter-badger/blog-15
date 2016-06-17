@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Posts on Random Thoughts </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://hadrouj.github.io/post/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Thu, 16 Jun 2016 22:16:27 UTC</updated>
+    
+    <item>
+      <title>Start a blog with Github and Hugo</title>
+      <link>http://hadrouj.github.io/post/start-a-blog-with-github-and-hugo/</link>
+      <pubDate>Thu, 16 Jun 2016 22:16:27 UTC</pubDate>
+      
+      <guid>http://hadrouj.github.io/post/start-a-blog-with-github-and-hugo/</guid>
+      <description>Well well Well&amp;hellip; this is my first post using Hugo and a really quick intro to setup it up, and publish a blog (for free) on Github. Hugo Hugo is a lightning fast and simple static web pages generator, suitable for blogs, documentation pages, portfolios, etc. It has been developed with Golang, and runs on MacOs X, Windows and Linux. Pages built with Hugo can be deployed on S3, GitHub Pages, Dropbox or any web host.</description>
+    </item>
+    
+  </channel>
+</rss>
+
